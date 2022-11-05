@@ -18,6 +18,7 @@ package edu.eci.pdsw.samples.tests;
 
 import edu.eci.pdsw.samples.entities.Paciente;
 import edu.eci.pdsw.samples.entities.Consulta;
+import edu.eci.pdsw.samples.entities.TipoIdentificacion;
 import edu.eci.pdsw.samples.services.ExcepcionServiciosSuscripciones;
 import edu.eci.pdsw.samples.services.ServiciosPacientesFactory;
 import java.sql.Connection;
@@ -86,7 +87,8 @@ public class ServicesJUnitTest {
             System.out.println(paciente);
         }
         //assert ...
-        Assert.fail("Pruebas no implementadas aun...");
+        Paciente paciente = ServiciosPacientesFactory.getInstance().getTestingForumServices().consultarPacientesPorId(9876, TipoIdentificacion.TI);
+        Assert.assertEquals(paciente.getNombre(),"Carmenzo");
         
     }    
     
