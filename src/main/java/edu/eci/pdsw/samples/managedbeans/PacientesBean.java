@@ -16,9 +16,11 @@
  */
 package edu.eci.pdsw.samples.managedbeans;
 
+import com.google.inject.Inject;
 import edu.eci.pdsw.samples.entities.Paciente;
 import edu.eci.pdsw.samples.entities.TipoIdentificacion;
 import edu.eci.pdsw.samples.services.ExcepcionServiciosSuscripciones;
+import edu.eci.pdsw.samples.services.ServiciosPaciente;
 import edu.eci.pdsw.samples.services.ServiciosPacientesFactory;
 import java.util.List;
 import javax.faces.bean.ManagedBean;
@@ -32,7 +34,13 @@ import javax.faces.bean.SessionScoped;
 @SessionScoped
 public class PacientesBean {
 
+    @Inject
+    ServiciosPaciente serviciosPaciente;
+
+
     TipoIdentificacion tipoIdentificacion = TipoIdentificacion.CC;
+
+
 
     public void setTipoIdentificacion(TipoIdentificacion tipoIdentificacion) {
         this.tipoIdentificacion = tipoIdentificacion;
