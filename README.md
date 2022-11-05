@@ -1,7 +1,9 @@
 ## Escuela Colombiana de Ingeniería
 
-### PDSW – Procesos de desarrollo de Software
+### CVDS – Ciclos de vida y desarrollo de software
 ### Parcial Segundo Tercio
+
+### Realizado por: Cristian Fernando Rodríguez González
 
 
 **IMPORTANTE**
@@ -57,10 +59,30 @@ Dado un número y tipo de identificacion de un paciente, mostrar el paciente y l
 
 Mostrar los pacientes menores de edad que en sus consultas se encuentren las enfermedades: hepatitis o varicela.
 
+Inicialmente debemos hacer unos pasos preliminares para empezar a desarrollar el parcial:
+
+1. Hacemos uso del comando "clone" para clonar el repositorio suministrado por el profesor:
+
+![](./img/1.png)
+
+2. Una vez tengamos el repositorio de manera local usamos el comando mvn tomcat7:run para poder compilar y ejecutar el proyecto:
+
+![](./img/2.png)
+
+3. Por el momento antes de desarrollar el proyecto podemos consultar el navegador web escribiendo: "http://localhost:8080/faces/consultaPaciente.xhtml" en el buscador de nuestro browser.
+
+![](./img/3.png)
+
+
 
 1.  (20%) A partir de la especificación hecha en los métodos
     *consultarPacientesPorId* y *consultarMenoresConEnfermedadContagiosa* de la fachada de
     servicios (la parte lógica de la aplicación), implemente sólo una prueba (la que considere más importante para validar las especificaciones y los criterios de aceptación). Siga el esquema usado en ServicesJUnitTest para poblar la base de datos volátil y verificar el comportamiento de las operaciones de la lógica.
+    
+   ### Solución:
+   
+1. 
+    
 
 2.  (40%) Implemente la historia de usuario #1, agregando todo lo que haga falta en la capa de presentación, lógica y de persistencia. La vista debe implementarse en consultaPaciente.xhtml.
 
