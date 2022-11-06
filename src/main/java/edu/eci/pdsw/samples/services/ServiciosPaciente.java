@@ -39,6 +39,7 @@ public interface ServiciosPaciente {
      * @throws ExcepcionServiciosSuscripciones si se presenta otro problema en las capas inferiores.
      */
     public List<Paciente> consultarMenoresConEnfermedadContagiosa() throws ExcepcionServiciosSuscripciones;
-    
 
+
+    List<Paciente> consultarMenoresConEnfermedadContagiosa(int id, TipoIdentificacion tipoIdentificacion) throws ExcepcionServiciosSuscripciones;
 }

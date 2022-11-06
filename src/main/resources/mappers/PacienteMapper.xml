@@ -34,4 +34,20 @@
         p.id = id AND p.tipo_id = tipo_id
     </select>
 
+    <select id="getMenoresEnfermedadContagiosa" resultMap="PacientResult" parameterType="Map">
+        SELECT
+        p.id AS id,
+        p.tipo_id AS tipo_id,
+        p.fecha_nacimiento AS fecha_nacimiento,
+        p.nombre AS nombre
+        c.idCONSULTAS AS idCONSULTAS,
+        c.fecha_y_hora AS fecha_y_hora,
+        c.resumen AS resumen
+        FROM
+        PACIENTES AS p JOIN CONSULTAS AS c ON
+        p.id = c.PACIENTES_id AND p.tipo_id = c.PACIENTES_tipo_id
+        WHERE
+        (p.tipo_id = "TI" OR p.tipo_id = "RC") AND (c.resumen LIKE "%varicela%" OR c.resumen LIKE "%hepatitis%")
+    </select>
+
 </mapper>

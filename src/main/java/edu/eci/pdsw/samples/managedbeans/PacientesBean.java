@@ -36,14 +36,20 @@ public class PacientesBean {
 
     @Inject
     ServiciosPaciente serviciosPaciente;
-
-
     TipoIdentificacion tipoIdentificacion = TipoIdentificacion.CC;
 
-
+    int idPaciente = getPaciente().getId();
 
     public void setTipoIdentificacion(TipoIdentificacion tipoIdentificacion) {
         this.tipoIdentificacion = tipoIdentificacion;
+    }
+
+    public Paciente getPaciente(){
+        try {
+            return serviciosPaciente.consultarPacientesPorId(idPaciente,tipoIdentificacion);
+        } catch (ExcepcionServiciosSuscripciones e) {
+            throw new RuntimeException(e);
+        }
     }
 
     public TipoIdentificacion getTipoIdentificacion() {

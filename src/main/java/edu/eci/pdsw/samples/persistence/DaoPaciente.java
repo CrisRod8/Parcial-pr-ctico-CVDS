@@ -39,5 +39,6 @@ public interface DaoPaciente {
     public void addConsulta(int id, TipoIdentificacion tipoId, Consulta c) throws PersistenceException;
 
     public Paciente getPacienteId(int id, TipoIdentificacion tipoId);
-    
+
+    public Paciente getMenoresEnfermedadContagiosa(int id, TipoIdentificacion tipoId);
 }

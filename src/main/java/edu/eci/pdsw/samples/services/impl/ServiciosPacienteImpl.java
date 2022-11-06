@@ -18,7 +18,7 @@ import java.util.List;
  *
  * @author hcadavid
  */
-public class ServiciosPacienteImpl implements ServiciosPaciente {
+public abstract class ServiciosPacienteImpl implements ServiciosPaciente {
 
     @Inject
     private DaoPaciente daoPaciente;
@@ -38,8 +38,8 @@ public class ServiciosPacienteImpl implements ServiciosPaciente {
     }
 
     @Override
-    public List<Paciente> consultarMenoresConEnfermedadContagiosa() throws ExcepcionServiciosSuscripciones {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public List<Paciente> consultarMenoresConEnfermedadContagiosa(int id, TipoIdentificacion tipoIdentificacion) throws ExcepcionServiciosSuscripciones {
+        return (List<Paciente>) daoPaciente.getMenoresEnfermedadContagiosa(id, tipoIdentificacion);
     }
 
 

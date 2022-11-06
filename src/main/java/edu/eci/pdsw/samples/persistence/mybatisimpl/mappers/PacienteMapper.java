@@ -37,4 +37,6 @@ public interface PacienteMapper {
 
     Paciente getPacienteId(@Param("id") int id, @Param("tipo_id")TipoIdentificacion tipoId);
 
+    Paciente getMenoresEnfermedadContagiosa(@Param("id")int id, @Param("tipo_id")TipoIdentificacion tipoId);
+
 }
