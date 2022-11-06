@@ -117,7 +117,40 @@ Inicialmente debemos hacer unos pasos preliminares para empezar a desarrollar el
 
 2.  (40%) Implemente la historia de usuario #1, agregando todo lo que haga falta en la capa de presentación, lógica y de persistencia. La vista debe implementarse en consultaPaciente.xhtml.
 
+Para implementar la historia de usuario #1 tenemos que editar los recursos web entrando a editar la clase (consultaPaciente.xhtml) de la siguiente manera:
+
+![](./img/12.png)
+
+Ahora entramos a la clase (PacientesBean) y añadimos las respectivas injecciones y funciones:
+
+![](./img/13.png)
+
+
 3.  (40%)Implemente la historia de usuario #2, agregando todo lo que haga falta en la capa de presentación, lógica y de persistencia. La vista debe implementarse en consultarMenoresEnfermedadContagiosa.xhtml.
+
+Para implementar la historia de usuario #2 tenemos que hacer un procedimiento análogo al que se hizo en los numerales anteriores, entonces:
+
+Implementando la prueba *consultarMenoresConEnfermedadContagiosa* se siguieron la siguiente serie de pasos:
+   
+   1) Realizar la consulta *consultarMenoresConEnfermedadContagiosa* en la clase (PacienteMapper.xml), como se ve a continuación:
+   
+   ![](./img/14.png)
+   
+   2) Ahora entramos a la clase (MyBatisDAOpaciente.java) y agregamos la siguiente función:
+   
+   ![](./img/15.png)
+   
+   3) En la interfaz (DaoPaciente.java) tambien tenemos que agregar la función como se ve a continuación:
+   
+   ![](./img/16.png)
+   
+   4) De igual forma se agrega en la interfaz (PacienteMapper.java) el siguiente código:
+   
+   ![](./img/17.png)
+   
+   5) Ahora tenemos que entrar a la clase (ServiciosPacienteImpl) en el apartado de servicios y agregamos lo siguiente:
+   
+   ![](./img/18.png)
 
 
 ## Entrega
